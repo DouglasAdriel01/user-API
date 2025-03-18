@@ -2,7 +2,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database');
 
-const User = sequelize.define('User', {
+const Paciente = sequelize.define('Paciente', {
   id: {
     type: DataTypes.STRING,
     primaryKey: true
@@ -26,7 +26,15 @@ const User = sequelize.define('User', {
   CPF: {
     type: DataTypes.STRING,
     allowNull: false
+  },
+  dataNascimento: {
+    type: DataTypes.DATE,
+    allowNull: false
+  },
+  endereco: {
+    type: DataTypes.STRING,
+    allowNull: false
   }
 });
 
-module.exports = User;
+module.exports = Paciente;
